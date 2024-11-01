@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background-color: #071724;
+}
+
+header {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+section {
+  margin: 2rem;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+/*
+Farbpalette (von dunkel nach hell):
+071724
+00314F
+17709C
+87A5C1
+D6DAE6
+https://de.pinterest.com/pin/664351382562261841/
+*/
