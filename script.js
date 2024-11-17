@@ -2,17 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Portfolio-Website geladen!");
 });
 
-const secret = process.env.SRF_API_TOKEN;
-const authorization_srf = secret + " " + secret;
-
-
 // Abruf der API und Anzeige der Daten
 fetch(
   "https://api.srgssr.ch/srf-meteo/v2/geolocationNames?name=sillerenb%C3%BChl",
   {
-    method: "GET", // oder GET, PUT, DELETE
+    method: "GET",
     headers: {
-      Authorization: authorization_srf,
+      Authorization: WEATHER_API_TOKEN,
       Accept: "application/json",
     },
   }

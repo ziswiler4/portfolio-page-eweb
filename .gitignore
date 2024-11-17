@@ -1,1 +1,4 @@
 # Gitignore file
+# Secrets und lokale Umgebungen nicht tracken
+secrets.js
+.env
