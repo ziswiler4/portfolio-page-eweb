@@ -2,18 +2,20 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["main"] 
+    branches: ["main"]
   workflow_dispatch:
-  
+  pages:
+    build_type: workflow
+
 permissions:
-  contents: read 
+  contents: read
   pages: write
   id-token: write
-  
+
 concurrency:
-  group: "pages" 
+  group: "pages"
   cancel-in-progress: false
-  
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,18 +25,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Inject Secret 
+
+      - name: Inject Secret
         run: echo "const WEATHER_API_TOKEN = '${{ secrets.WEATHER_API_TOKEN }}';" > secrets.js
-        
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3 
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
-        
+          path: "."
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
