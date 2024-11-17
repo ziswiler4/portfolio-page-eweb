@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"] 
   workflow_dispatch:
+  pages:
+    build_type: workflow
   
 permissions:
   contents: read 
