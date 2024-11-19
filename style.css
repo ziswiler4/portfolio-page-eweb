@@ -28,17 +28,6 @@ footer {
   color: #fff;
 }
 
-.location {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-.geolocation-name {
-  font-weight: bold;
-  color: #333;
-}
-
 /*
 Farbpalette (von dunkel nach hell):
 071724
