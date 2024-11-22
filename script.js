@@ -51,10 +51,10 @@ fetch("https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181", {
           <p><strong>Neuschnee:</strong> ${FRESHSNOW_MM} mm</p>
         `;
       } else {
-        console.error("Keine Wetterdaten für den heutigen Tag gefunden.");
+        console.error("Es gab leider einen Fehler mit der API Wetter Abfrage.");
       }
     } else {
-      console.error("Die Antwort enthält keine 'three_hours'-Daten.");
+      console.error("Es gab leider einen Fehler mit der API Wetter Abfrage.");
     }
   })
   .catch((error) => {

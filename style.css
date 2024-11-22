@@ -16,6 +16,13 @@ section {
   margin: 2rem;
 }
 
+.hobbys {
+  display: inline-block;
+  padding: 10px;
+  background-color: #00314f;
+  border-radius: 4px;
+}
+
 #projects {
   display: flex;
   flex-wrap: wrap;
