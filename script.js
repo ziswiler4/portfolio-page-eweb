@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // API Wetterdaten Adelboden
-fetch("https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181", {
+fetch(`https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181`, {
   method: "GET",
   headers: {
     Authorization: WEATHER_API_TOKEN,
@@ -39,8 +39,7 @@ fetch("https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181", {
       const nearestData = getNearestData(data.three_hours, now);
 
       if (nearestData) {
-        const { TTL_C, TTH_C, FF_KMH, FRESHSNOW_MM, SUN_MIN, TTTFEEL_C } =
-          nearestData;
+        const { TTL_C, TTH_C, FF_KMH, FRESHSNOW_MM, TTTFEEL_C } = nearestData;
 
         const weatherDiv = document.getElementById("weather");
         weatherDiv.innerHTML = `
@@ -56,6 +55,33 @@ fetch("https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181", {
     } else {
       console.error("Es gab leider einen Fehler mit der API Wetter Abfrage.");
     }
+  })
+  .catch((error) => {
+    console.error("Fehler bei der API-Anfrage:", error);
+  });
+
+// API Astronomy picture of the day
+const today = new Date();
+const formattedDate = today.toISOString().split("T")[0];
+
+fetch(
+  `https://api.nasa.gov/planetary/apod?api_key=${STARS_API_TOKEN}&date=${formattedDate}`
+)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Fehler beim Abrufen der Daten: " + response.status);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log("API Daten:", data);
+
+    const imgElement = document.getElementById("apod-image");
+    imgElement.src = data.url;
+
+    imgElement.addEventListener("click", () => {
+      alert(data.explanation);
+    });
   })
   .catch((error) => {
     console.error("Fehler bei der API-Anfrage:", error);

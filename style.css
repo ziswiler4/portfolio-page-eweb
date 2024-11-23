@@ -16,11 +16,19 @@ section {
   margin: 2rem;
 }
 
-.hobbys {
+.hobbys-container {
   display: inline-block;
+}
+
+.hobbys-item {
   padding: 10px;
   background-color: #00314f;
+  text-align: left;
   border-radius: 4px;
+}
+
+#apod-image {
+  cursor: pointer;
 }
 
 #projects {
