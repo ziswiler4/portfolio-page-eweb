@@ -35,6 +35,8 @@ fetch(`https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181`, {
       return nearestEntry;
     };
 
+    const weatherExplanation = document.getElementById("weatherExplanation");
+
     if (data && data.three_hours) {
       const nearestData = getNearestData(data.three_hours, now);
 
@@ -49,15 +51,19 @@ fetch(`https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181`, {
           <p><strong>Windgeschwindigkeit:</strong> ${FF_KMH} km/h</p>
           <p><strong>Neuschnee:</strong> ${FRESHSNOW_MM} mm</p>
         `;
-      } else {
-        console.error("Es gab leider einen Fehler mit der API Wetter Abfrage.");
       }
     } else {
-      console.error("Es gab leider einen Fehler mit der API Wetter Abfrage.");
+      // Keine Daten vorhanden
+      console.error("Es gab leider ein Problem mit der API Wetter Abfrage.");
+      weatherExplanation.textContent =
+        "Es gab leider ein Problem mit der Wetterabfrage.";
     }
   })
   .catch((error) => {
-    console.error("Fehler bei der API-Anfrage:", error);
+    console.error(
+      "Es gab leider einen Fehler mit der API Wetter Abfrage.",
+      error
+    );
   });
 
 // API Astronomy picture of the day
@@ -77,11 +83,21 @@ fetch(
     console.log("API Daten:", data);
 
     const imgElement = document.getElementById("apod-image");
-    imgElement.src = data.url;
+    const explanationElement = document.getElementById("APODexplanation");
 
-    imgElement.addEventListener("click", () => {
-      alert(data.explanation);
-    });
+    // Überprüfung des Dateityps (Bild)
+    if (data.media_type === "image") {
+      imgElement.src = data.url;
+
+      // Bildbeschreibung anzeigen, wenn auf das Bild geklickt wird
+      imgElement.addEventListener("click", () => {
+        alert(data.explanation);
+      });
+    } else {
+      // Falls kein Bild verfügbar ist
+      imgElement.style.display = "none";
+      explanationElement.textContent = "Heute ist leider kein Bild verfügbar.";
+    }
   })
   .catch((error) => {
     console.error("Fehler bei der API-Anfrage:", error);

@@ -17,7 +17,11 @@ section {
 }
 
 .hobbys-container {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px;
 }
 
 .hobbys-item {
@@ -25,10 +29,35 @@ section {
   background-color: #00314f;
   text-align: left;
   border-radius: 4px;
+  flex: 1 1 calc(25% - 15px);
+  box-sizing: border-box;
+  padding: 20px;
+  word-wrap: break-word;
+}
+
+#weatherExplanation {
+  font-style: italic;
+}
+.svg-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.svg {
+  margin-top: 20px;
+  width: 90px;
+  height: auto;
+}
+
+#APODexplanation {
+  font-style: italic;
 }
 
 #apod-image {
   cursor: pointer;
+  width: 300px;
+  height: auto;
 }
 
 #projects {
