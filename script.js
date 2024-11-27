@@ -82,8 +82,8 @@ fetch(
   .then((data) => {
     console.log("API Daten:", data);
 
-    const imgElement = document.getElementById("apod-image");
-    const explanationElement = document.getElementById("APODexplanation");
+    const imgElement = document.getElementById("apodImage");
+    const explanationElement = document.getElementById("apodExplanation");
 
     // Überprüfung des Dateityps (Bild)
     if (data.media_type === "image") {
