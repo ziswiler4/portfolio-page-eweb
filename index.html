@@ -5,80 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Tamara Ziswiler</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-    <header>
-      <h1>Tamara Ziswiler</h1>
-    </header>
 
-    <section id="about">
-      <h2>Über mich</h2>
-      <p>
-        Hier stellst du dich vor und beschreibst deine Kenntnisse und
-        Interessen.
-      </p>
+    <script src="secrets.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <header>
+    <h1>Tamara Ziswiler</h1>
+  </header>
+  <body>
+    <section id="werdegang">
+      <h2>Werdegang</h2>
+      <p>Im untenstehenden Bereich wird mein Werdegang vorgestellt.</p>
+
+      <div class="werdegang-container">
+        <h3>Berufserfahrung</h3>
+
+        <div class="werdegang-items">
+          <p>
+            <strong
+              >Assistant website & electronical customer connection</strong
+            >
+          </p>
+          <p>DT Swiss AG</p>
+          <p>Juli 2022 - heute</p>
+        </div>
+
+        <div class="werdegang-items">
+          <p><strong>Assistant Sales Administration</strong></p>
+          <p>DT Swiss AG</p>
+          <p>August 2019 - Juni 2022</p>
+        </div>
+
+        <div class="werdegang-items">
+          <p><strong>Commercial Apprentice</strong></p>
+          <p>DT Swiss AG</p>
+          <p>August 2016 - Juli 2019</p>
+        </div>
+      </div>
+
+      <div class="werdegang-container">
+        <h3>Ausbildung</h3>
+        <div class="werdegang-items">
+          <p><strong>Bachelor of Science in Wirtschaftsinformatik</strong></p>
+          <p>Berner Fachhochschule BFH</p>
+          <p>August 2022 - Juli 2026</p>
+        </div>
+        <div class="werdegang-items">
+          <p><strong>Kauffrau EFZ M-Profil</strong></p>
+          <p>BFB Biel Formation Biel-Bienne</p>
+          <p>August 2016 - Juli 2019</p>
+        </div>
+      </div>
     </section>
 
-<section id="hobbys">
-  <h2>Hobbys</h2>
-  <p>Im untenstehenden Bereich werden meine Hobbys vorgestellt.</p>
-<div class="hobbys-container">
+    <section id="hobbys">
+      <h2>Hobbys</h2>
+      <p>Im untenstehenden Bereich werden meine Hobbys vorgestellt.</p>
+      <div class="hobbys-container">
+        <div class="hobbys-item">
+          <h3>Ski</h3>
+          <p>
+            Die beste Zeit des Jahres beginnt, sobald der erste Schnee fällt und
+            somit auch die Skisaison eröffnet wird. Das Skigebiet meiner Wahl
+            ist im Berner Oberland.
+          </p>
+          <p><strong>Ort:</strong> Sillerenbühl, Adelboden BE</p>
+          <p><strong>Höhe:</strong> 1978 m. ü. M.</p>
+          <div id="weather"></div>
+          <p id="weatherExplanation">Wetterdaten in dreistündlichen Updates</p>
+        </div>
 
-    <div class="hobbys-item">
-      <h3>Ski</h3>
-      <p>
-        Die beste Zeit des Jahres beginnt, sobald der erste Schnee fällt und
-        somit auch die Skisaison eröffnet wird. Das Skigebiet meiner Wahl ist im Berner Oberland.</p>
-      <p><strong>Ort:</strong> Sillerenbühl, Adelboden BE</p>
-      <p><strong>Höhe:</strong> 1978 m. ü. M.</p>
-      <div id="weather"></div>
-      <p id="weatherExplanation">Wetterdaten in dreistündlichen Updates</p>
-    </div>
+        <div class="hobbys-item">
+          <h3>Musik</h3>
+          <p>
+            In meiner Freizeit mache ich gerne Musik und engagiere mich in
+            verschiedenen Vereinen.
+          </p>
+          <p><strong>Instrument:</strong> Oboe</p>
+          <p><strong>Anzahl Jahre:</strong> 15 Jahre</p>
+          <p><strong>Verein:</strong> Musikgesellschaft Siselen</p>
+          <p><strong>Verantwortlichkeiten:</strong></p>
+          <ul>
+            <li>Kassierin, Musikgesellschaft Siselen</li>
+            <li>Mitglied Ressort Administration, Musiklager Seeland</li>
+            <li>Mitglied Ressort Jugend, Seeländischer Musikverband</li>
+          </ul>
+          <p>
+            <strong>Lieblingsmusikstück:</strong> Lord Tullamore (Carl Wittrock)
+          </p>
+          <iframe
+            style="border-radius: 4px"
+            src="https://open.spotify.com/embed/track/5hTXuS9LqXC9RLX84i93Ma?utm_source=generator&theme=0"
+            width="100%"
+            height="120"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
 
-    <div class="hobbys-item">
-      <h3>Musik</h3>
-      <p>In meiner Freizeit mache ich gerne Musik und engagiere mich in verschiedenen Vereinen.</p>
-      <p><strong>Instrument:</strong> Oboe</p>
-      <p><strong>Anzahl Jahre:</strong> 15 Jahre</p>
-      <p><strong>Verein:</strong> Musikgesellschaft Siselen</p>
-      <p><strong>Verantwortlichkeiten:</strong></p>
-        <ul>
-        <li>Kassierin, Musikgesellschaft Siselen</li>
-        <li>Mitglied Ressort Administration, Musiklager Seeland</li>
-        <li>Mitglied Ressort Jugend, Seeländischer Musikverband</li>
-      </ul>
-      <p><strong>Lieblingsmusikstück:</strong> Lord Tullamore (Carl Wittrock)</p>
-      <iframe style="border-radius: 4px" 
-      src="https://open.spotify.com/embed/track/5hTXuS9LqXC9RLX84i93Ma?utm_source=generator&theme=0" 
-      width="100%" 
-      height="120" 
-      frameBorder="0" 
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-      loading="lazy"></iframe>
-    </div>
+        <div class="hobbys-item">
+          <h3>& some more...</h3>
+          <p>
+            Die Freizeit, die mir neben den restlichen Hobbys noch bleibt, nutze
+            ich auch gerne.
+          </p>
+          <p><strong>Lesen:</strong> 18 Bücher in 2024</p>
+          <p><strong>Inlineskaten:</strong> 341 km in 2024</p>
+          <p><strong>Schwimmen:</strong> 9'165 m im Sommer 2024</p>
+          <div class="svg-container">
+            <img
+              class="svg-item"
+              src="./Images/reading-child-svgrepo-com.svg"
+              alt="SVG Lesen"
+            />
+            <img
+              class="svg-item"
+              src="./Images/inline-skating-svgrepo-com.svg"
+              alt="SVG Inlineskaten"
+            />
+            <img
+              class="svg-item"
+              src="./Images/swimming-svgrepo-com.svg"
+              alt="SVG Schwimmen"
+            />
+          </div>
+        </div>
 
-    <div class="hobbys-item">
-      <h3>& some more...</h3>
-      <p>Die Freizeit, die mir neben den restlichen Hobbys noch bleibt, nutze ich auch gerne.</p>
-      <p><strong>Lesen:</strong> 18 Bücher in 2024</p>
-      <p><strong>Inlineskaten:</strong> 341 km in 2024</p>
-      <p><strong>Schwimmen:</strong> 9'165 m im Sommer 2024</p>
-      <div class="svg-container">
-      <img class="svg-item" src="./Images/reading-child-svgrepo-com.svg" alt="SVG Lesen">
-      <img class="svg-item" src="./Images/inline-skating-svgrepo-com.svg" alt="SVG Inlineskaten">
-      <img class="svg-item" src="./Images/swimming-svgrepo-com.svg" alt="SVG Schwimmen">
+        <div class="hobbys-item">
+          <h3>a sky full of stars</h3>
+          <p>just for fun - wer kennt es nicht, das APOD*.</p>
+          <img id="apodImage" alt="APOD" />
+          <p id="apodExplanation">
+            Klicke auf das Bild, um die Bildbeschreibung anzuzeigen.
+          </p>
+          <p>*Astronomy Picture of the Day</p>
+        </div>
       </div>
-    </div>
-
-    <div class="hobbys-item">
-      <h3>a sky full of stars</h3>
-      <p>just for fun - wer kennt es nicht, das APOD*. </p>
-        <img id="apodImage" alt="APOD">
-      <p id="apodExplanation">Klicke auf das Bild, um die Bildbeschreibung anzuzeigen.</p>
-      <p>*Astronomy Picture of the Day</p>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="projects">
       <h2>Projekte</h2>
@@ -88,8 +153,5 @@
     <footer>
       <p>© 2024 Tamara Ziswiler</p>
     </footer>
-
-    <script src="secrets.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 /* Allgemein */
-
 header {
   text-align: center;
   color: #ffffff;
@@ -22,6 +21,19 @@ footer {
 
 section {
   margin: 2rem;
+}
+
+/* Werdegang Section */
+.werdegang-container {
+  display: grid;
+  gap: 15px;
+  padding: 10px;
+}
+
+.werdegang-items {
+  background-color: #00314f;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 /* Hobbys Section */
