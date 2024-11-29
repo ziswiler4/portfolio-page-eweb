@@ -25,8 +25,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Inject Secret
-        run: echo "const WEATHER_API_TOKEN = '${{ secrets.WEATHER_API_TOKEN }}';" > secrets.js
-
+        run: echo "const WEATHER_API_TOKEN = '${{ secrets.WEATHER_API_TOKEN }}'; const STARS_API_TOKEN = '${{ secrets.STARS_API_TOKEN }}';" > secrets.js
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
