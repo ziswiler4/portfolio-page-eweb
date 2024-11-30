@@ -25,15 +25,38 @@ section {
 
 /* Werdegang Section */
 .werdegang-container {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   gap: 15px;
   padding: 10px;
+  width: 100%;
 }
 
 .werdegang-items {
+  flex: 1;
+  padding: 10px;
+}
+
+.werdegang-elements {
   background-color: #00314f;
   border-radius: 4px;
   padding: 10px;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.werdegang-content {
+  text-align: left;
+}
+
+.logo {
+  margin-top: 20px;
+  width: 150px;
+  height: auto;
 }
 
 /* Hobbys Section */
