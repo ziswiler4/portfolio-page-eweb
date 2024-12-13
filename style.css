@@ -1,8 +1,14 @@
 /* Allgemein */
 header {
   text-align: center;
-  color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #101B2D;
   padding: 1rem;
+  height: 20vh;
+  background-image: url("Images/Bergkette.jpg");
+  background-size:100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -10,7 +16,7 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  background-color: #071724;
+  background-color: #101B2D;
 }
 
 footer {
@@ -21,6 +27,12 @@ footer {
 
 section {
   margin: 2rem;
+}
+
+@media (max-width: 1000px) {
+  header {
+    background-size:cover;
+  }
 }
 
 /* Werdegang Section */
@@ -54,7 +66,6 @@ section {
 }
 
 .logo {
-  margin-top: 20px;
   width: 150px;
   height: auto;
 }
@@ -134,7 +145,7 @@ section {
 
 /*
 Farbpalette (von dunkel nach hell):
-071724
+071724 -> new: 101B2D
 00314F
 17709C
 87A5C1
