@@ -19,19 +19,32 @@ body {
   background-color: #101B2D;
 }
 
+section {
+  text-align: center;
+  margin: 2rem;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
   color: #ffffff;
 }
 
-section {
-  margin: 2rem;
-}
-
 @media (max-width: 1000px) {
   header {
     background-size:cover;
+  }
+}
+
+/* Willkommen Section */
+#willkommen {
+  width: 50%;
+  margin: 5px auto;
+}
+
+@media (max-width: 720px) {
+  #willkommen {
+    width: 90%;
   }
 }
 

@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Portfolio-Website wurde geladen!");
-});
-
 // API Wetterdaten Adelboden
 fetch(`https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181`, {
   method: "GET",
@@ -80,8 +76,6 @@ fetch(
     return response.json();
   })
   .then((data) => {
-    console.log("API Daten:", data);
-
     const imgElement = document.getElementById("apodImage");
     const explanationElement = document.getElementById("apodExplanation");
 
