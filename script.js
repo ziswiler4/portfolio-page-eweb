@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 fetch(`https://api.srgssr.ch/srf-meteo/v2/forecastpoint/46.4716%2C7.5181`, {
   method: "GET",
   headers: {
-    Authorization: WEATHER_API_TOKEN,
+    Authorization: "Bearer " + WEATHER_API_TOKEN,
     Accept: "application/json",
   },
 })
