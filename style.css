@@ -59,6 +59,18 @@ section {
   height: auto;
 }
 
+@media (max-width: 1000px) {
+  .werdegang-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .werdegang-elements .logo {
+    display: none;
+  } */
+}
+
 /* Hobbys Section */
 .hobbys-container {
   display: grid;
