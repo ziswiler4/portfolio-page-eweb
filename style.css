@@ -36,6 +36,35 @@ footer {
   color: #ffffff;
 }
 
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 5px;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+}
+
+.nav a:hover {
+  transform: scale(1.1);
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+.nav li:not(:last-child)::after {
+  content: "|";
+  margin-left: 5px;
+}
+
 /* Willkommen Section */
 #willkommen {
   width: 50%;
@@ -111,6 +140,11 @@ footer {
   padding: 10px;
   border-radius: 4px;
   white-space: nowrap;
+}
+
+.skill-basic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skill-large {
