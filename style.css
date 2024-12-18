@@ -2,11 +2,11 @@
 header {
   text-align: center;
   font-family: Arial, sans-serif;
-  color: #101B2D;
+  color: #0a192c;
   padding: 1rem;
   height: 20vh;
   background-image: url("Images/Bergkette.jpg");
-  background-size:100%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -16,7 +16,7 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  background-color: #101B2D;
+  background-color: #0a192c;
 }
 
 section {
@@ -32,7 +32,7 @@ footer {
 
 @media (max-width: 1000px) {
   header {
-    background-size:cover;
+    background-size: cover;
   }
 }
 
@@ -92,7 +92,43 @@ footer {
 @media (max-width: 500px) {
   .werdegang-elements .logo {
     display: none;
-  } */
+  }
+}
+
+/* Skills Section */
+.skill-container {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-basic {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.skill-large {
+  font-size: calc(35px * 0.8);
+  height: 35px;
+  background-color: #282828;
+}
+
+.skill-medium {
+  font-size: calc(25px * 0.8);
+  height: 25px;
+  background-color: #414141;
+}
+
+.skill-small {
+  font-size: calc(15px * 0.8);
+  height: 15px;
+  background-color: #656464;
 }
 
 /* Hobbys Section */
@@ -148,20 +184,3 @@ footer {
   max-width: 270px;
   height: auto;
 }
-
-/* To Do */
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/*
-Farbpalette (von dunkel nach hell):
-071724 -> new: 101B2D
-00314F
-17709C
-87A5C1
-D6DAE6
-https://de.pinterest.com/pin/664351382562261841/
-*/
